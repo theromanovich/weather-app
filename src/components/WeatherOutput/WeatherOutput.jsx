@@ -6,16 +6,16 @@ const API_KEY = '243fd0876f4114a945f94ebbf4f04b79'
 
 
 const WeatherOutput = () => {
-    const {city, setCity, weather} = useCityContext();
+    const {city, setCity, weather, setWeather} = useCityContext();
 
     useEffect(() => {
         axios
         .get(`https://api.openweathermap.org/data/2.5/weather?q=Kyiv&appid=${API_KEY}&units=metric`)
-        .then(response => setCity(response.data));
+        .then(response => setWeather({icon: response.data.weather[0].main, temperature: response.data.main.temp}));
     }, [])        
             
     return (
-        <div>{city}</div>
+        <div>{weather.icon}</div>
 
     )
 }

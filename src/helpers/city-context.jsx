@@ -8,7 +8,6 @@ const CityProvider = ({children}) => {
   const [city, setCity] = useState('s')
   const [weather, setWeather] = useState({
       temperature: '',
-      weather: '',
       icon: '',
   })
   return (
