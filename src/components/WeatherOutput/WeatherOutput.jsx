@@ -9,15 +9,14 @@ const WeatherOutput = () => {
     const {city, setCity, weather, setWeather} = useCityContext();
 
     useEffect(() => {
-        fetch(`https://api.openweathermap.org/data/2.5/weather?q=Moscow&appid=${API_KEY}&units=metric`)
+        fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`)
         .then(response => response.json())
         // .then(response => console.log(response))
         .then(data => {
-            console.log(data.main.temp)
             setWeather({ icon: data.weather[0].icon, temperature: data.main.temp })
         })
         .catch(error => console.error(error));
-    }, [])        
+    }, [city])        
 
     useEffect(() => {
         console.log(weather)
@@ -26,8 +25,8 @@ const WeatherOutput = () => {
     return (
         <>
          <img src={`https://openweathermap.org/img/wn/${weather.icon}.png`}/>
+         {city}
          <span>{weather.temperature}</span>
-         <div>{weather.icon}</div>
         </>
 
 
