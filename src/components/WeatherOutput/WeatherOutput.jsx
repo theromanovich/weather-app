@@ -9,13 +9,28 @@ const WeatherOutput = () => {
     const {city, setCity, weather, setWeather} = useCityContext();
 
     useEffect(() => {
-        axios
-        .get(`https://api.openweathermap.org/data/2.5/weather?q=Kyiv&appid=${API_KEY}&units=metric`)
-        .then(response => setWeather({icon: response.data.weather[0].main, temperature: response.data.main.temp}));
+        fetch(`https://api.openweathermap.org/data/2.5/weather?q=Moscow&appid=${API_KEY}&units=metric`)
+        .then(response => response.json())
+        // .then(response => console.log(response))
+        .then(data => {
+            console.log(data.main.temp)
+            setWeather({ icon: data.weather[0].icon, temperature: data.main.temp })
+        })
+        .catch(error => console.error(error));
     }, [])        
-            
+
+    useEffect(() => {
+        console.log(weather)
+    }, [weather])
+    
     return (
-        <div>{weather.icon}</div>
+        <>
+         <img src={`https://openweathermap.org/img/wn/${weather.icon}.png`}/>
+         <span>{weather.temperature}</span>
+         <div>{weather.icon}</div>
+        </>
+
+
 
     )
 }
