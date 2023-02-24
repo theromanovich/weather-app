@@ -1,12 +1,18 @@
 import { createContext, useContext, useState } from "react";
 
+
 const cityContext = createContext()
-const [city, setcity] = useState('')
-const [weather, setWeather] = useState({})
 
 const CityProvider = ({children}) => {
+
+  const [city, setCity] = useState('s')
+  const [weather, setWeather] = useState({
+      temperature: '',
+      weather: '',
+      icon: '',
+  })
   return (
-    <cityContext.Provider value={{city, setcity, weather, setWeather}}>
+    <cityContext.Provider value={{city, setCity, weather, setWeather}}>
         {children}
     </cityContext.Provider>
   )
