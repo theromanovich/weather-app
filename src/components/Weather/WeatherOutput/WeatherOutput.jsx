@@ -25,14 +25,17 @@ const WeatherOutput = () => {
     return (
         <>
             <div className='weather-card'>
-              {city && 
-              <>
-                  <img src={`https://openweathermap.org/img/wn/${weather.icon}.png`}/>
-                  <div>
-                      {city}
-                  </div>
-                  <div>{weather.temperature}</div>
-              </>
+              {city ? (
+                       <>
+                       <img src={`https://openweathermap.org/img/wn/${weather.icon}.png`}/>
+                       <div className='city'>
+                           {city}
+                       </div>
+                       <div className='temperature'>{`${weather.temperature} C`}</div>
+                   </>
+              ) : (
+                <span className='waiting'>Please enter city</span>
+              )
               }
             </div>
         </>

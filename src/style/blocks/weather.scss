@@ -16,6 +16,23 @@
         align-items: center;
         flex-direction: column;
         justify-content: center;
-        gap: 10px;
+        img {
+            width: 100px;
+        }
+        .city {
+            text-transform: capitalize;
+            font-size: 30px;
+            margin-bottom: 10px;
+            color: blue;
+        }
+        .temperature {
+            font-size: 20px;
+            color: rosybrown;
+        }
+        .waiting {
+            font-size: 20px;
+            color: green;
+        }
     }
+    
 }
