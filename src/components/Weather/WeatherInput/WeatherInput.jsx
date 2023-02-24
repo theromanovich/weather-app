@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import { useCityContext } from "../../helpers/city-context";
+import { useCityContext } from "../../../helpers/city-context";
 
 const WeatherInput = () => {
   const cityInput = useRef()

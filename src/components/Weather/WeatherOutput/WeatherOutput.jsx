@@ -24,9 +24,13 @@ const WeatherOutput = () => {
     
     return (
         <>
-         <img src={`https://openweathermap.org/img/wn/${weather.icon}.png`}/>
-         {city}
-         <span>{weather.temperature}</span>
+            <div className='weather-card'>
+                <img src={`https://openweathermap.org/img/wn/${weather.icon}.png`}/>
+                <div>
+                    {city}
+                </div>
+                <div>{weather.temperature}</div>
+            </div>
         </>
 
 

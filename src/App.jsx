@@ -1,17 +1,12 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import WeatherOutput from './components/WeatherOutput/WeatherOutput'
-import WeatherInput from './components/WeatherInput/WeatherInput'
+import Weather from './components/Weather/Weather'
 import CityProvider from './helpers/city-context'
 function App() {
 
   return (
-    <>
     <CityProvider>
-      <WeatherInput/>
-      <WeatherOutput/>
+      <Weather/>
     </CityProvider>
-    </>
   )
 }
 
