@@ -5,7 +5,7 @@ const cityContext = createContext()
 
 const CityProvider = ({children}) => {
 
-  const [city, setCity] = useState('s')
+  const [city, setCity] = useState('')
   const [weather, setWeather] = useState({
       temperature: '',
       icon: '',

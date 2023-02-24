@@ -1,7 +1,7 @@
 import { FaSun, FaCloud, FaCloudSun, FaCloudRain, FaSnowflake } from 'react-icons/fa';
 import axios from 'axios';
 import { useEffect } from 'react';
-import { useCityContext } from '../../helpers/city-context';
+import { useCityContext } from '../../../helpers/city-context';
 const API_KEY = '243fd0876f4114a945f94ebbf4f04b79'
 
 
@@ -25,11 +25,15 @@ const WeatherOutput = () => {
     return (
         <>
             <div className='weather-card'>
-                <img src={`https://openweathermap.org/img/wn/${weather.icon}.png`}/>
-                <div>
-                    {city}
-                </div>
-                <div>{weather.temperature}</div>
+              {city && 
+              <>
+                  <img src={`https://openweathermap.org/img/wn/${weather.icon}.png`}/>
+                  <div>
+                      {city}
+                  </div>
+                  <div>{weather.temperature}</div>
+              </>
+              }
             </div>
         </>
 
