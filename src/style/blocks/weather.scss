@@ -1,5 +1,6 @@
 .weather {
     width: 400px;
+    max-width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -44,6 +45,7 @@
         flex-direction: column;
         input {
             width: 150px;
+            max-width: 100%;
             height: 15px;
             border-radius: 30px;
             padding: 15px;

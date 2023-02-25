@@ -7,21 +7,22 @@ const API_KEY = '243fd0876f4114a945f94ebbf4f04b79'
 
 const WeatherOutput = () => {
     const {city, setCity, weather, setWeather} = useCityContext();
-
+  
     useEffect(() => {
         fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`)
-        .then(response => response.json())
-        // .then(response => console.log(response))
-        .then(data => {
+        .then(response => {
+            if (response.status !== 200) {
+                setCity('')
+                setWeather('')
+            }
+            return response.json();
+          })
+          .then(data => {
             setWeather({ icon: data.weather[0].icon, temperature: data.main.temp })
-        })
-        .catch(error => console.error(error));
-    }, [city])        
+          })
+      }, [city]);
 
-    useEffect(() => {
-        console.log(weather)
-    }, [weather])
-    
+    console.log(city)
     return (
         <>
             <div className='weather-card'>
@@ -37,6 +38,7 @@ const WeatherOutput = () => {
                 <span className='waiting'>Please enter city</span>
               )
               }
+             
             </div>
         </>
 
