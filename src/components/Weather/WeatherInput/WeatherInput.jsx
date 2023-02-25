@@ -14,7 +14,7 @@ const WeatherInput = () => {
 
   return (
     <form className="weather-input" onSubmit={setNewCity}>
-        <input type="text" ref={cityInput} />
+        <input type="text" ref={cityInput} placeholder="Enter city" />
         <button>submit</button>
     </form>
   )

@@ -5,7 +5,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin: 100px auto;
+    margin: 50px auto;
     &-card {
         background-color: white;
         width: 100%;
@@ -103,4 +103,23 @@
         }
     }
     
+}
+
+
+.bg-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    button {
+        cursor: pointer;
+        background: black;
+        color: white;
+        padding: 10px 15px;
+        text-align: center;
+        border: none;
+        border-radius: 30px;
+    }
 }
