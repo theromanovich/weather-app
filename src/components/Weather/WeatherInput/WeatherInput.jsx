@@ -7,7 +7,7 @@ const WeatherInput = () => {
 
   const setNewCity = (e)  => {
     e.preventDefault()
-    setCity(cityInput.current.value)
+    setCity(cityInput.current.value.toLowerCase())
     cityInput.current.value = ''
   }
 

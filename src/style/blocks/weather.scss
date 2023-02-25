@@ -62,14 +62,15 @@
         }
     }
     &-additional {
-        display: flex;
-        gap: 20px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
         width: 550px;
         max-width: 100%;
         margin-top: 20px;
         text-align: center;
         .humidity {
-            width: 50%;
+            width: 120px;
             background-color: white;
             margin: 0 auto;
             padding: 30px;
@@ -79,10 +80,20 @@
             font-size: 16px;
         }
         .pressure {
-            width: 50%;
+            width: 120px;
             background-color: white;
             margin: 0 auto;
             padding: 30px;
+            border-radius: 30px;
+            box-shadow: 3px 6px 55px 0px rgba(0,0,0,0.75);
+            color: blue;
+            font-size: 16px;
+        }
+        .wind {
+            width: 140px;
+            background-color: white;
+            margin: 0 auto;
+            padding: 30px 10px;
             border-radius: 30px;
             box-shadow: 3px 6px 55px 0px rgba(0,0,0,0.75);
             color: blue;

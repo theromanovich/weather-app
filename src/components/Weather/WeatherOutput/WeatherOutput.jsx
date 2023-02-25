@@ -16,7 +16,7 @@ const WeatherOutput = () => {
             return response.json();
           })
           .then(data => {
-            setWeather({ icon: data.weather[0].icon, temperature: data.main.temp, pressure: data.main.pressure, humidity: data.main.humidity })
+            setWeather({ icon: data.weather[0].icon, temperature: data.main.temp, pressure: data.main.pressure, humidity: data.main.humidity, windSpeed: data.wind.speed })
           })
       }, [city]);
 
