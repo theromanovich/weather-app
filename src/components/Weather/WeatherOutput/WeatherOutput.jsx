@@ -17,6 +17,7 @@ const WeatherOutput = () => {
             }
             return response.json();
           })
+          .then(data => console.log(data))
           .then(data => {
             setWeather({ icon: data.weather[0].icon, temperature: data.main.temp })
           })

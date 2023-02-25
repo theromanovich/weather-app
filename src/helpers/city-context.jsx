@@ -8,6 +8,9 @@ const CityProvider = ({children}) => {
   const [city, setCity] = useState('')
   const [weather, setWeather] = useState({
       temperature: '',
+      pressure: '',
+      windSpeed: '',
+      humidity: '',
       icon: '',
   })
   return (
