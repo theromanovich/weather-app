@@ -5,10 +5,18 @@ const WeatherAdditional = () => {
     return (
         <div className="weather-additional">
             <div className="humidity">
+                <div>
+                    Вологість:
+                </div>
                 {humidity}
             </div>
            <div className="pressure">
+                <div>
+                    Тиск:  
+                </div>
+                <div>
                 {pressure}
+                </div>
            </div>
         </div>
     )
