@@ -1,9 +1,18 @@
 import { useState, useEffect } from "react"
+
+const getBgFromLocalStorage = () => {
+    let bg = 'blue-bg';
+    if (localStorage.getItem('bg')) {
+        bg = localStorage.getItem('bg')
+    }
+    return bg;
+}
 const ChangeBg = () => {
-    const [bg, setBg] = useState('blue-bg')
+    const [bg, setBg] = useState(getBgFromLocalStorage())
 
     useEffect(() => {
-        document.documentElement.className = bg
+        document.documentElement.className = bg;
+        localStorage.setItem('bg', bg)
     }, [bg])
     const setBlueBg = () => {
         setBg('blue-bg');
