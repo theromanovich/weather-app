@@ -12,6 +12,7 @@ const CityProvider = ({children}) => {
       windSpeed: '',
       humidity: '',
       icon: '',
+      weatherType: ''
   })
   return (
     <cityContext.Provider value={{city, setCity, weather, setWeather}}>

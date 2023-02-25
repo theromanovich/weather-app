@@ -35,6 +35,13 @@
             font-size: 20px;
             color: green;
         }
+        &__descr {
+            color: rosybrown;
+            font-size: 18px;
+            &::first-letter {
+                text-transform: uppercase;
+            }
+        }
     }
     &-input {
         display: flex;
@@ -80,6 +87,9 @@
             box-shadow: 3px 6px 55px 0px rgba(0,0,0,0.75);
             color: blue;
             font-size: 16px;
+            span {
+                color: rosybrown;
+            }
         }
         .pressure {
             width: 120px;
@@ -90,6 +100,9 @@
             box-shadow: 3px 6px 55px 0px rgba(0,0,0,0.75);
             color: blue;
             font-size: 16px;
+            span {
+                color: rosybrown;
+            }
         }
         .wind {
             width: 140px;
@@ -100,6 +113,9 @@
             box-shadow: 3px 6px 55px 0px rgba(0,0,0,0.75);
             color: blue;
             font-size: 16px;
+            span {
+                color: rosybrown;
+            }
         }
     }
     

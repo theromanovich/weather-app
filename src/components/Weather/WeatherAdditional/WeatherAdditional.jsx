@@ -8,14 +8,14 @@ const WeatherAdditional = () => {
                 <div>
                     Вологість:
                 </div>
-                    {humidity}%
+                    <span>{humidity}%</span>
             </div>
            <div className="pressure">
                 <div>
                     Тиск:  
                 </div>
                 <div>
-                    {pressure} мм. рт. ст.
+                    <span>{pressure} мм. рт. ст.</span>
                 </div>
            </div>
            <div className="wind">
@@ -23,7 +23,7 @@ const WeatherAdditional = () => {
                     Швидкість вітру:
                 </div>
                 <div>
-                    {windSpeed} м/с
+                    <span>{windSpeed} м/с</span>
                 </div>
            </div>
         </div>
