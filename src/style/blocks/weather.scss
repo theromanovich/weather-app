@@ -59,11 +59,13 @@
             background-color: #002366;
             text-transform: uppercase;
             color: #FFDAB9;
+            cursor: pointer;
         }
     }
     &-additional {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        display: flex;
+        // grid-template-columns: repeat(2, 1fr);
+        flex-wrap: wrap;
         gap: 10px;
         width: 550px;
         max-width: 100%;

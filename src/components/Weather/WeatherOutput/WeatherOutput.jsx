@@ -35,13 +35,9 @@ const WeatherOutput = () => {
               ) : (
                 <span className='waiting'>Please enter city</span>
               )
-              }
-             
+              }        
             </div>
         </>
-
-
-
     )
 }
 export default WeatherOutput
