@@ -1,29 +1,38 @@
+import React from "react";
 import { useState, useEffect } from "react";
 
-const getBgFromLocalStorage = () => {
-  let bg = "blue-bg";
+enum Bg {
+  blue = "blue-bg",
+  orange = "orange-bg",
+  green = "green-bg",
+  pink = "pink-bg",
+}
+
+const getBgFromLocalStorage = (): string => {
+  let bg = Bg.blue;
   if (localStorage.getItem("bg")) {
-    bg = localStorage.getItem("bg");
+    bg = localStorage.getItem("bg") as Bg;
   }
   return bg;
 };
-const ChangeBg = () => {
-  const [bg, setBg] = useState(getBgFromLocalStorage());
+const ChangeBg: React.FC = () => {
+  const [bg, setBg] = useState<string>(getBgFromLocalStorage());
 
   useEffect(() => {
     document.documentElement.className = bg;
     localStorage.setItem("bg", bg);
   }, [bg]);
-  const setBlueBg = () => {
+
+  const setBlueBg = (): void => {
     setBg("blue-bg");
   };
-  const setOrangeBg = () => {
+  const setOrangeBg = (): void => {
     setBg("orange-bg");
   };
-  const setGreenBg = () => {
+  const setGreenBg = (): void => {
     setBg("green-bg");
   };
-  const setPinkBg = () => {
+  const setPinkBg = (): void => {
     setBg("pink-bg");
   };
 
