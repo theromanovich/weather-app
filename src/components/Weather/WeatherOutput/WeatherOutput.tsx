@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { useCityContext } from "../../../helpers/city-context";
 const API_KEY = "243fd0876f4114a945f94ebbf4f04b79";
 
-const WeatherOutput = () => {
+const WeatherOutput: React.FC = () => {
   const { city, setCity, weather, setWeather } = useCityContext();
 
   useEffect(() => {
