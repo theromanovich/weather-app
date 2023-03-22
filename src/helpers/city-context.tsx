@@ -1,5 +1,7 @@
 import { createContext, useContext, useState } from "react";
 import React from "react";
+import { ReactNode } from "react";
+
 interface Weather {
   temperature: string;
   pressure: string;
@@ -30,9 +32,11 @@ const cityContext = createContext<CityContextType>({
   setWeather: () => {},
 });
 
-type Props = { children?: React.ReactNode };
+type Props = {
+  children: string | JSX.Element | JSX.Element[];
+};
 
-const CityProvider: React.FC = ({ children }: Props) => {
+const CityProvider: React.FC<Props> = ({ children }) => {
   const [city, setCity] = useState("");
   const [weather, setWeather] = useState<Weather>({
     temperature: "",
