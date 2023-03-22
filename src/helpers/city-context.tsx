@@ -3,12 +3,12 @@ import React from "react";
 import { ReactNode } from "react";
 
 interface Weather {
-  temperature: string;
-  pressure: string;
-  windSpeed: string;
-  humidity: string;
-  icon: string;
-  weatherType: string;
+  temperature?: string;
+  pressure?: string;
+  windSpeed?: string;
+  humidity?: string;
+  icon?: string;
+  weatherType?: string;
 }
 
 interface CityContextType {
